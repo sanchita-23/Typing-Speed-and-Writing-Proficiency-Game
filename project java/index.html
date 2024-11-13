@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Typing Speed Test</h1>
+        
+        <!-- Difficulty Level Selection -->
+        <label for="difficulty">Select Difficulty:</label>
+        <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+        
+        <!-- Display the sentence to type -->
+        <div id="sentence" class="sentence">
+            <!-- JavaScript will insert a random sentence here -->
+        </div>
+
+        <!-- Input for typing -->
+        <input type="text" id="typingInput" placeholder="Start typing here..." oninput="checkTyping()" disabled />
+        
+        <!-- Timer and results display -->
+        <div class="results">
+            <span id="timer">Time: 0s</span>
+            <span id="wpm">WPM: 0</span>
+            <span id="accuracy">Accuracy: 0%</span>
+            <span id="mistakes">Mistakes: 0</span>
+        </div>
+
+        <!-- Start, Finish, and Reset buttons -->
+        <button onclick="startTest()">Start Test</button>
+        <button onclick="finishTest()">Finish Test</button>
+        <button onclick="resetTest()">Reset</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
